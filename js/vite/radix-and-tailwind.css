@@ -1,0 +1,51 @@
+/* NOTE:
+ * Using Radix-themes with TailwindCSS v4, with custom Google font
+ * */
+
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap");
+@layer theme, base, components, utilities;
+
+@layer theme {
+  :root {
+    --font-serif: "EB Garamond", serif;
+  }
+}
+
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+
+@layer base {
+  html, body {
+    background: var(--color-background) !important;
+    min-height: 100%;
+  }
+  * {
+    scrollbar-width: thin;
+  }
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    overscroll-behavior: none;
+    min-height: 100vh;
+  }
+  :root {
+    isolation: isolate;
+  }
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 4px;
+  }
+}
+
+@import "@radix-ui/themes/styles.css" layer(components);
+@import "tailwindcss/utilities.css" layer(utilities);

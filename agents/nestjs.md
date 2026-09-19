@@ -43,9 +43,9 @@ All HTTP errors must follow this format:
 
 ## NestJS Architecture
 
-This is an HTTP service built with NestJS.
-
-Use NestJS conventions for HTTP-related concerns:
+- This is an HTTP service built with NestJS.
+- Read the official docs here: https://docs.nestjs.com/llms.txt
+- Use NestJS conventions for HTTP-related concerns:
 
 * `controllers`
 
